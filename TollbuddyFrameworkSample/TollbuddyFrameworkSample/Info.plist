@@ -24,6 +24,8 @@
 	<string>Test geofence</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Test geofence</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Test geofence</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
