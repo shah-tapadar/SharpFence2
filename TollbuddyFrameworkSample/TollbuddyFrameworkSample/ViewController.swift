@@ -37,8 +37,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        B2B.startMonitoring()
     }
     
     func initializeView() {
@@ -55,10 +53,12 @@ class ViewController: UIViewController {
     
     func updateMonitoringState() {
         if isMonitoring {
+            B2B.startMonitoring()
             changeMonitoringButton.setTitle("Stop Monitoring", for: .normal)
             changeMonitoringButton.backgroundColor = UIColor.red
             monitoringStatusLabel.text = "Location Monitoring is Active"
         } else {
+            B2B.stopMonitoring()
             changeMonitoringButton.setTitle("Start Monitoring", for: .normal)
             changeMonitoringButton.backgroundColor = themeBlueColor
             monitoringStatusLabel.text = "Not Monitoring Location Changes"
