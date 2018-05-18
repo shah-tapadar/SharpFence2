@@ -21,6 +21,12 @@
 		6837EE34208DB19900D37D40 /* TollbuddyFrameworkSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837EE33208DB19900D37D40 /* TollbuddyFrameworkSampleUITests.swift */; };
 		6837EE70208DB4BD00D37D40 /* TollBuddy_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6837EE6B208DB3FF00D37D40 /* TollBuddy_SDK.framework */; };
 		6837EE71208DB4BD00D37D40 /* TollBuddy_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6837EE6B208DB3FF00D37D40 /* TollBuddy_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B9FB6E6620AEF20A008E76D9 /* G107.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B9FB6E5F20AEF209008E76D9 /* G107.gpx */; };
+		B9FB6E6720AEF20A008E76D9 /* G103.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B9FB6E6120AEF209008E76D9 /* G103.gpx */; };
+		B9FB6E6820AEF20A008E76D9 /* G104.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B9FB6E6220AEF209008E76D9 /* G104.gpx */; };
+		B9FB6E6920AEF20A008E76D9 /* G105.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B9FB6E6320AEF20A008E76D9 /* G105.gpx */; };
+		B9FB6E6A20AEF20A008E76D9 /* G106.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B9FB6E6420AEF20A008E76D9 /* G106.gpx */; };
+		B9FB6E6B20AEF20A008E76D9 /* G108.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B9FB6E6520AEF20A008E76D9 /* G108.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +111,12 @@
 		68D19F952097246500400A61 /* 57-Edachira-Toll-Fence-South.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "57-Edachira-Toll-Fence-South.gpx"; sourceTree = "<group>"; };
 		68D19F962097249400400A61 /* 59-Edachira-Toll-Fence-North-1.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "59-Edachira-Toll-Fence-North-1.gpx"; sourceTree = "<group>"; };
 		68D19F97209724BD00400A61 /* 60-Edachira-Toll-Fence-North-2.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "60-Edachira-Toll-Fence-North-2.gpx"; sourceTree = "<group>"; };
+		B9FB6E5F20AEF209008E76D9 /* G107.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = G107.gpx; sourceTree = "<group>"; };
+		B9FB6E6120AEF209008E76D9 /* G103.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = G103.gpx; sourceTree = "<group>"; };
+		B9FB6E6220AEF209008E76D9 /* G104.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = G104.gpx; sourceTree = "<group>"; };
+		B9FB6E6320AEF20A008E76D9 /* G105.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = G105.gpx; sourceTree = "<group>"; };
+		B9FB6E6420AEF20A008E76D9 /* G106.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = G106.gpx; sourceTree = "<group>"; };
+		B9FB6E6520AEF20A008E76D9 /* G108.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = G108.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +225,12 @@
 				6815C86D20AEB60000DBC903 /* G2.gpx */,
 				6815C86E20AEB60900DBC903 /* G3.gpx */,
 				683EA9FC209C96A900EF2F3B /* ExitLocation.gpx */,
+				B9FB6E6120AEF209008E76D9 /* G103.gpx */,
+				B9FB6E6220AEF209008E76D9 /* G104.gpx */,
+				B9FB6E6320AEF20A008E76D9 /* G105.gpx */,
+				B9FB6E6420AEF20A008E76D9 /* G106.gpx */,
+				B9FB6E5F20AEF209008E76D9 /* G107.gpx */,
+				B9FB6E6520AEF20A008E76D9 /* G108.gpx */,
 			);
 			path = "Simulated locations";
 			sourceTree = "<group>";
@@ -357,7 +375,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9FB6E6B20AEF20A008E76D9 /* G108.gpx in Resources */,
+				B9FB6E6620AEF20A008E76D9 /* G107.gpx in Resources */,
 				6837EE1E208DB19900D37D40 /* LaunchScreen.storyboard in Resources */,
+				B9FB6E6720AEF20A008E76D9 /* G103.gpx in Resources */,
+				B9FB6E6A20AEF20A008E76D9 /* G106.gpx in Resources */,
+				B9FB6E6820AEF20A008E76D9 /* G104.gpx in Resources */,
+				B9FB6E6920AEF20A008E76D9 /* G105.gpx in Resources */,
 				6837EE1B208DB19900D37D40 /* Assets.xcassets in Resources */,
 				6837EE19208DB19900D37D40 /* Main.storyboard in Resources */,
 			);
