@@ -20,6 +20,16 @@ internal enum UserDefaultsWrapper {
         }
     }
     
+    static var minSpeedForMonitoring: Double? {
+        set {
+            UserDefaults.standard.set(newValue, forKey: UserDefaultsKeys.minSpeedForMonitoring)
+            UserDefaults.standard.synchronize()
+        }
+        get {
+            return (UserDefaults.standard.value(forKey: UserDefaultsKeys.minSpeedForMonitoring) as? Double)
+        }
+    }
+    
     static var distanceFilter: CLLocationDistance? {
         set {
             UserDefaults.standard.set(newValue, forKey: UserDefaultsKeys.distanceFilter)
@@ -43,6 +53,7 @@ internal enum UserDefaultsWrapper {
 
 private enum UserDefaultsKeys {
     static let accuracyLevel = "B2BSample-AccuracyLevel"
+    static let minSpeedForMonitoring = "B2BSample-MinSpeedForMonitoring"
     static let distanceFilter = "B2BSample-DistanceFilter"
     static let headingFilter = "B2BSample-HeadingFilter"
     static let authToken = "B2BSample-AuthToken"

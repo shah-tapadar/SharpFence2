@@ -8,6 +8,7 @@
 
 import UIKit
 import TollBuddy_SDK
+import MessageUI
 
 class ViewController: UIViewController {
     
@@ -21,6 +22,7 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var speedCheckLabel: UILabel!
     @IBOutlet weak var speedCheckSwitch: UISwitch!
     @IBOutlet weak var geofenceQueueLabel: UILabel!
     
@@ -29,10 +31,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        B2B.setLoggingLevel(.debug)
+        B2B.setLoggingLevel(.debug, shouldWriteToFile: true)
         B2B.initializeSDK()
         
         initializeView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let minSpeed = UserDefaultsWrapper.minSpeedForMonitoring ?? 20
+        speedCheckLabel.text = "Speed Check (\(minSpeed) miles/hour)"
+        view.setNeedsLayout()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,5 +81,29 @@ class ViewController: UIViewController {
     
     @IBAction func speedCheckStatusChanged(_ sender: Any) {
         B2B.setSpeedCheckEnabled(speedCheckSwitch.isOn)
+    }
+    
+    @IBAction func emailLogs(_ sender: Any) {
+        
+        let mailVC = MFMailComposeViewController()
+        mailVC.mailComposeDelegate = self
+        mailVC.setToRecipients([])
+        let date = Date()
+        mailVC.setSubject("B2B SDK Logs - \(date)")
+        if let attachmentData = NSData(contentsOf: B2B.logFileURL()) {
+            mailVC.setMessageBody("Please find the B2B SDK logs generated on \(date) attached herewith.", isHTML: false)
+            mailVC.addAttachmentData(attachmentData as Data, mimeType: "txt", fileName: "B2B-SDK-Logs - \(date).txt")
+        } else {
+            mailVC.setMessageBody("No log file could be found. Please verify that logToFile was set to 'true' in B2B setup configuration.", isHTML: false)
+        }
+        
+        present(mailVC, animated: true, completion: nil)
+    }
+}
+
+extension ViewController: MFMailComposeViewControllerDelegate {
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

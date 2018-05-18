@@ -16,6 +16,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var pickerContainerView: UIView!
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var minSpeedField: UITextField!
     @IBOutlet weak var distanceFilterField: UITextField!
     @IBOutlet weak var headingFilterField: UITextField!
     
@@ -40,6 +41,11 @@ class SettingsViewController: UIViewController {
             accuracyLevelButton.setTitle("Accuracy Level: Default", for: .normal)
         }
         
+        if let minSpeed = UserDefaultsWrapper.minSpeedForMonitoring {
+            minSpeedField.text = "\(minSpeed)"
+        } else {
+            minSpeedField.text = ""
+        }
         if let distanceFilter = UserDefaultsWrapper.distanceFilter {
             distanceFilterField.text = "\(distanceFilter)"
         } else {
@@ -64,6 +70,12 @@ class SettingsViewController: UIViewController {
     @IBAction func save(_ sender: Any) {
         UserDefaultsWrapper.accuracyLevel = selectedAccuracyLevel
         
+        if let minSpeedString = minSpeedField.text,
+            let minSpeed = Double(minSpeedString) {
+            UserDefaultsWrapper.minSpeedForMonitoring = minSpeed
+        } else {
+            UserDefaultsWrapper.minSpeedForMonitoring = nil
+        }
         if let distanceFilterString = distanceFilterField.text,
         let distanceFilter = Double(distanceFilterString) {
             UserDefaultsWrapper.distanceFilter = distanceFilter

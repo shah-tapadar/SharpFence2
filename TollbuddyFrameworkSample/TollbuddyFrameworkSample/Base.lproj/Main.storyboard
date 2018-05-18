@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -84,6 +85,10 @@
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cOk-2G-bFL">
                                                         <rect key="frame" x="285" y="5" width="51" height="31"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="31" id="FJM-nT-LCM"/>
+                                                            <constraint firstAttribute="width" constant="49" id="zQq-NJ-2Ei"/>
+                                                        </constraints>
                                                         <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <connections>
                                                             <action selector="speedCheckStatusChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="xSE-Ve-arj"/>
@@ -125,7 +130,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="siE-3f-HZO"/>
                                                 </constraints>
-                                                <state key="normal" title="Route Summary">
+                                                <state key="normal" title="Email Logs">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -133,6 +138,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="emailLogs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ujS-xj-p5E"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -168,6 +176,7 @@
                         <outlet property="changeMonitoringButton" destination="ffb-W3-7vf" id="dX1-U3-gvh"/>
                         <outlet property="geofenceQueueLabel" destination="JYS-wb-WQj" id="4y4-OH-pCd"/>
                         <outlet property="monitoringStatusLabel" destination="i9V-7t-T18" id="B5M-sU-6q1"/>
+                        <outlet property="speedCheckLabel" destination="jps-yz-9oX" id="TlA-eu-p6X"/>
                         <outlet property="speedCheckSwitch" destination="cOk-2G-bFL" id="8zG-Qr-Jec"/>
                     </connections>
                 </viewController>
@@ -187,10 +196,10 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ymk-nT-uGs">
-                                        <rect key="frame" x="15" y="30" width="345" height="201"/>
+                                        <rect key="frame" x="15" y="30" width="345" height="226.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bl9-po-PII">
-                                                <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bl9-po-PII">
+                                                <rect key="frame" x="0.0" y="-40" width="345" height="40"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="bAs-8a-Ke2"/>
@@ -207,8 +216,23 @@
                                                     <action selector="accuracyLevelButtonTapped:" destination="k2w-wh-7t0" eventType="touchUpInside" id="HPK-Yf-wt6"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Min Speed for Monitoring (in MPH)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIn-78-uVX">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="990" constant="20.5" id="GhU-PY-IMG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Default (20 MPH)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SFf-Kd-dc7">
+                                                <rect key="frame" x="0.0" y="35.5" width="345" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Distance Filter" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xw6-2W-Og8">
-                                                <rect key="frame" x="0.0" y="55" width="345" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="80.5" width="345" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="990" constant="20.5" id="0QO-MU-r5n"/>
                                                 </constraints>
@@ -216,14 +240,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distance Filter" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N7f-89-K1Y">
-                                                <rect key="frame" x="0.0" y="90.5" width="345" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Default (None)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N7f-89-K1Y">
+                                                <rect key="frame" x="0.0" y="116" width="345" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Heading Filter" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKh-kj-WBb">
-                                                <rect key="frame" x="0.0" y="135.5" width="345" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="161" width="345" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="990" constant="20.5" id="PgC-oI-Bo4"/>
                                                 </constraints>
@@ -231,8 +255,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Heading Filter" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fzk-Zn-1vj">
-                                                <rect key="frame" x="0.0" y="171" width="345" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Default (None)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fzk-Zn-1vj">
+                                                <rect key="frame" x="0.0" y="196.5" width="345" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
@@ -251,7 +275,7 @@
                                     <outletCollection property="gestureRecognizers" destination="wXU-pX-sd4" appends="YES" id="wfI-aJ-WL6"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtP-7t-mF0" userLabel="Picker Container View">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtP-7t-mF0" userLabel="Picker Container View">
                                 <rect key="frame" x="0.0" y="407" width="375" height="260"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Y3-sY-ZgH">
@@ -315,6 +339,7 @@
                         <outlet property="contentView" destination="PVN-c5-ifb" id="oP2-6E-Dvh"/>
                         <outlet property="distanceFilterField" destination="N7f-89-K1Y" id="eqg-Ga-viZ"/>
                         <outlet property="headingFilterField" destination="Fzk-Zn-1vj" id="0SV-PF-sop"/>
+                        <outlet property="minSpeedField" destination="SFf-Kd-dc7" id="YEB-A9-uO0"/>
                         <outlet property="pickerContainerView" destination="mtP-7t-mF0" id="iOG-8X-KXm"/>
                         <outlet property="pickerView" destination="9Y3-sY-ZgH" id="hoh-BU-SJg"/>
                     </connections>
