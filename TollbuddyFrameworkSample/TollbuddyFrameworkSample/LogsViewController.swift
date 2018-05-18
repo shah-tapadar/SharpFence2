@@ -24,6 +24,13 @@ class LogsViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let bottom = NSMakeRange(textView.text.count - 1, 1)
+        textView.scrollRangeToVisible(bottom)
+    }
+    
     @IBAction func email(_ sender: Any) {
         
         let mailVC = MFMailComposeViewController()
