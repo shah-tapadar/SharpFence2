@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6815C86820AE983B00DBC903 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815C86720AE983B00DBC903 /* LogsViewController.swift */; };
 		6827215120A969DB003E960E /* UIView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827215020A969DB003E960E /* UIView+Custom.swift */; };
 		6827215420A99BB3003E960E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827215320A99BB3003E960E /* SettingsViewController.swift */; };
 		6827215620A99CFE003E960E /* UserDefaultsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827215520A99CFE003E960E /* UserDefaultsHandler.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6815C86720AE983B00DBC903 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
 		6827215020A969DB003E960E /* UIView+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Custom.swift"; sourceTree = "<group>"; };
 		6827215320A99BB3003E960E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6827215520A99CFE003E960E /* UserDefaultsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHandler.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				6837EE13208DB19900D37D40 /* AppDelegate.swift */,
 				6837EE15208DB19900D37D40 /* ViewController.swift */,
 				6827215320A99BB3003E960E /* SettingsViewController.swift */,
+				6815C86720AE983B00DBC903 /* LogsViewController.swift */,
 				6827215520A99CFE003E960E /* UserDefaultsHandler.swift */,
 				6827215020A969DB003E960E /* UIView+Custom.swift */,
 				68D19F9120971C2100400A61 /* Simulated locations */,
@@ -372,6 +375,7 @@
 				6827215620A99CFE003E960E /* UserDefaultsHandler.swift in Sources */,
 				6827215120A969DB003E960E /* UIView+Custom.swift in Sources */,
 				6827215420A99BB3003E960E /* SettingsViewController.swift in Sources */,
+				6815C86820AE983B00DBC903 /* LogsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

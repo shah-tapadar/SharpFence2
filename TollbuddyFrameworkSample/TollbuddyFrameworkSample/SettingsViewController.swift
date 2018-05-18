@@ -105,6 +105,22 @@ class SettingsViewController: UIViewController {
         }
         accuracyLevelButton.setTitle("Accuracy Level: \(levelName)", for: .normal)
     }
+    
+    @IBAction func clearLogs(_ sender: Any) {
+        
+        let alertVC = UIAlertController(title: "Warning!", message: "Are you sure you want to clear the logs?", preferredStyle: .alert)
+        let deleteAction = UIAlertAction(title: "Clear", style: .destructive) { _ in
+            B2B.clearLogs()
+            alertVC.dismiss(animated: true, completion: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            alertVC.dismiss(animated: true, completion: nil)
+        }
+        alertVC.addAction(deleteAction)
+        alertVC.addAction(cancelAction)
+        
+        present(alertVC, animated: true)
+    }
 }
 
 extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {

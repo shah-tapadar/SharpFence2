@@ -82,28 +82,4 @@ class ViewController: UIViewController {
     @IBAction func speedCheckStatusChanged(_ sender: Any) {
         B2B.setSpeedCheckEnabled(speedCheckSwitch.isOn)
     }
-    
-    @IBAction func emailLogs(_ sender: Any) {
-        
-        let mailVC = MFMailComposeViewController()
-        mailVC.mailComposeDelegate = self
-        mailVC.setToRecipients([])
-        let date = Date()
-        mailVC.setSubject("B2B SDK Logs - \(date)")
-        if let attachmentData = NSData(contentsOf: B2B.logFileURL()) {
-            mailVC.setMessageBody("Please find the B2B SDK logs generated on \(date) attached herewith.", isHTML: false)
-            mailVC.addAttachmentData(attachmentData as Data, mimeType: "txt", fileName: "B2B-SDK-Logs - \(date).txt")
-        } else {
-            mailVC.setMessageBody("No log file could be found. Please verify that logToFile was set to 'true' in B2B setup configuration.", isHTML: false)
-        }
-        
-        present(mailVC, animated: true, completion: nil)
-    }
-}
-
-extension ViewController: MFMailComposeViewControllerDelegate {
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
-    }
 }
