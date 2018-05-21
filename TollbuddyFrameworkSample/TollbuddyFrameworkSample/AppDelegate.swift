@@ -105,7 +105,12 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         
         UIApplication.shared.applicationIconBadgeNumber = 0
         
-        displayPrompt(title: "Push Received", message: "\(userInfo)",
+        var message: String = "\(userInfo)"
+        if let alert = (userInfo["aps"] as? [AnyHashable: Any])?["alert"] as? String {
+            message = alert
+        }
+
+        displayPrompt(title: "Push Notification Received", message: message,
             acceptTitle: "OK", cancelTitle: nil,
             accepted: { (accepted) in
         })
