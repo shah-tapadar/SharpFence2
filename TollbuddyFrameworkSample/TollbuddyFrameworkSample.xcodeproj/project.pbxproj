@@ -85,6 +85,9 @@
 		6815C86720AE983B00DBC903 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
 		6815C86920AEB0FB00DBC903 /* UIViewController+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Custom.swift"; sourceTree = "<group>"; };
 		6815C86B20AEB56200DBC903 /* TollbuddyFrameworkSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TollbuddyFrameworkSample.entitlements; sourceTree = "<group>"; };
+		6815C86C20AEB5ED00DBC903 /* G1.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = G1.gpx; sourceTree = "<group>"; };
+		6815C86D20AEB60000DBC903 /* G2.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = G2.gpx; sourceTree = "<group>"; };
+		6815C86E20AEB60900DBC903 /* G3.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = G3.gpx; sourceTree = "<group>"; };
 		6827215020A969DB003E960E /* UIView+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Custom.swift"; sourceTree = "<group>"; };
 		6827215320A99BB3003E960E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6827215520A99CFE003E960E /* UserDefaultsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHandler.swift; sourceTree = "<group>"; };
@@ -103,6 +106,11 @@
 		6837EE35208DB19900D37D40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6837EE65208DB3FD00D37D40 /* TollBuddy SDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "TollBuddy SDK.xcodeproj"; path = "../../Repo/TollBuddy SDK/TollBuddy SDK.xcodeproj"; sourceTree = "<group>"; };
 		683EA9FC209C96A900EF2F3B /* ExitLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ExitLocation.gpx; sourceTree = "<group>"; };
+		68D19F9320971CC200400A61 /* 58-Edachira-Toll-Fence-East.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "58-Edachira-Toll-Fence-East.gpx"; sourceTree = "<group>"; };
+		68D19F942097242D00400A61 /* 56-Edachira-Toll-Fence-Plaza.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "56-Edachira-Toll-Fence-Plaza.gpx"; sourceTree = "<group>"; };
+		68D19F952097246500400A61 /* 57-Edachira-Toll-Fence-South.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "57-Edachira-Toll-Fence-South.gpx"; sourceTree = "<group>"; };
+		68D19F962097249400400A61 /* 59-Edachira-Toll-Fence-North-1.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "59-Edachira-Toll-Fence-North-1.gpx"; sourceTree = "<group>"; };
+		68D19F97209724BD00400A61 /* 60-Edachira-Toll-Fence-North-2.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "60-Edachira-Toll-Fence-North-2.gpx"; sourceTree = "<group>"; };
 		B9FB6E5F20AEF209008E76D9 /* G107.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = G107.gpx; sourceTree = "<group>"; };
 		B9FB6E6120AEF209008E76D9 /* G103.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = G103.gpx; sourceTree = "<group>"; };
 		B9FB6E6220AEF209008E76D9 /* G104.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = G104.gpx; sourceTree = "<group>"; };
@@ -208,6 +216,14 @@
 		68D19F9120971C2100400A61 /* Simulated locations */ = {
 			isa = PBXGroup;
 			children = (
+				68D19F942097242D00400A61 /* 56-Edachira-Toll-Fence-Plaza.gpx */,
+				68D19F952097246500400A61 /* 57-Edachira-Toll-Fence-South.gpx */,
+				68D19F9320971CC200400A61 /* 58-Edachira-Toll-Fence-East.gpx */,
+				68D19F962097249400400A61 /* 59-Edachira-Toll-Fence-North-1.gpx */,
+				68D19F97209724BD00400A61 /* 60-Edachira-Toll-Fence-North-2.gpx */,
+				6815C86C20AEB5ED00DBC903 /* G1.gpx */,
+				6815C86D20AEB60000DBC903 /* G2.gpx */,
+				6815C86E20AEB60900DBC903 /* G3.gpx */,
 				683EA9FC209C96A900EF2F3B /* ExitLocation.gpx */,
 				B9FB6E6120AEF209008E76D9 /* G103.gpx */,
 				B9FB6E6220AEF209008E76D9 /* G104.gpx */,
