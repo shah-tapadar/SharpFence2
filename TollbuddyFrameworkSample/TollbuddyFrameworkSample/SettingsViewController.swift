@@ -89,8 +89,7 @@ class SettingsViewController: UIViewController {
             UserDefaultsWrapper.headingFilter = nil
         }
         
-        B2B.setLocationProperties(preferredAccuracy: selectedAccuracyLevel,
-                                  distanceFilter: UserDefaultsWrapper.distanceFilter,
+        B2B.setLocationProperties(distanceFilter: UserDefaultsWrapper.distanceFilter,
                                   headingFilter: UserDefaultsWrapper.headingFilter)
         B2B.setGeofenceLimits(maxDistance: nil, maxCount: nil,
                               minSpeedForMonitoring: UserDefaultsWrapper.minSpeedForMonitoring,
