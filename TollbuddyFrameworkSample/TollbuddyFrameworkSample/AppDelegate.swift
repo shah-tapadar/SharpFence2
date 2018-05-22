@@ -8,7 +8,7 @@
 
 import UIKit
 import UserNotifications
-import TollBuddy_SDK
+import HTA_B2B
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6815C86820AE983B00DBC903 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815C86720AE983B00DBC903 /* LogsViewController.swift */; };
 		6815C86A20AEB0FB00DBC903 /* UIViewController+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815C86920AEB0FB00DBC903 /* UIViewController+Custom.swift */; };
+		681D082A20B40503007A5D04 /* HTA_B2B.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681D082920B40503007A5D04 /* HTA_B2B.framework */; };
+		681D082B20B40503007A5D04 /* HTA_B2B.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 681D082920B40503007A5D04 /* HTA_B2B.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6827215120A969DB003E960E /* UIView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827215020A969DB003E960E /* UIView+Custom.swift */; };
 		6827215420A99BB3003E960E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827215320A99BB3003E960E /* SettingsViewController.swift */; };
 		6827215620A99CFE003E960E /* UserDefaultsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827215520A99CFE003E960E /* UserDefaultsHandler.swift */; };
@@ -19,8 +21,6 @@
 		6837EE1E208DB19900D37D40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6837EE1C208DB19900D37D40 /* LaunchScreen.storyboard */; };
 		6837EE29208DB19900D37D40 /* TollbuddyFrameworkSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837EE28208DB19900D37D40 /* TollbuddyFrameworkSampleTests.swift */; };
 		6837EE34208DB19900D37D40 /* TollbuddyFrameworkSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837EE33208DB19900D37D40 /* TollbuddyFrameworkSampleUITests.swift */; };
-		6837EE70208DB4BD00D37D40 /* TollBuddy_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6837EE6B208DB3FF00D37D40 /* TollBuddy_SDK.framework */; };
-		6837EE71208DB4BD00D37D40 /* TollBuddy_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6837EE6B208DB3FF00D37D40 /* TollBuddy_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9FB6E6620AEF20A008E76D9 /* G107.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B9FB6E5F20AEF209008E76D9 /* G107.gpx */; };
 		B9FB6E6720AEF20A008E76D9 /* G103.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B9FB6E6120AEF209008E76D9 /* G103.gpx */; };
 		B9FB6E6820AEF20A008E76D9 /* G104.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B9FB6E6220AEF209008E76D9 /* G104.gpx */; };
@@ -44,37 +44,16 @@
 			remoteGlobalIDString = 6837EE0F208DB19900D37D40;
 			remoteInfo = TollbuddyFrameworkSample;
 		};
-		6837EE6A208DB3FF00D37D40 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6837EE65208DB3FD00D37D40 /* TollBuddy SDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6871730820861F26002BA0A4;
-			remoteInfo = "TollBuddy SDK";
-		};
-		6837EE6C208DB3FF00D37D40 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6837EE65208DB3FD00D37D40 /* TollBuddy SDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6871731120861F26002BA0A4;
-			remoteInfo = "TollBuddy SDKTests";
-		};
-		6837EE72208DB4BD00D37D40 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6837EE65208DB3FD00D37D40 /* TollBuddy SDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 6871730720861F26002BA0A4;
-			remoteInfo = "TollBuddy SDK";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6837EE74208DB4BD00D37D40 /* Embed Frameworks */ = {
+		681D082420B4020A007A5D04 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6837EE71208DB4BD00D37D40 /* TollBuddy_SDK.framework in Embed Frameworks */,
+				681D082B20B40503007A5D04 /* HTA_B2B.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +64,7 @@
 		6815C86720AE983B00DBC903 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
 		6815C86920AEB0FB00DBC903 /* UIViewController+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Custom.swift"; sourceTree = "<group>"; };
 		6815C86B20AEB56200DBC903 /* TollbuddyFrameworkSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TollbuddyFrameworkSample.entitlements; sourceTree = "<group>"; };
+		681D082920B40503007A5D04 /* HTA_B2B.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HTA_B2B.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6827215020A969DB003E960E /* UIView+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Custom.swift"; sourceTree = "<group>"; };
 		6827215320A99BB3003E960E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6827215520A99CFE003E960E /* UserDefaultsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHandler.swift; sourceTree = "<group>"; };
@@ -101,7 +81,7 @@
 		6837EE2F208DB19900D37D40 /* TollbuddyFrameworkSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TollbuddyFrameworkSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6837EE33208DB19900D37D40 /* TollbuddyFrameworkSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TollbuddyFrameworkSampleUITests.swift; sourceTree = "<group>"; };
 		6837EE35208DB19900D37D40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6837EE65208DB3FD00D37D40 /* TollBuddy SDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "TollBuddy SDK.xcodeproj"; path = "../../Repo/TollBuddy SDK/TollBuddy SDK.xcodeproj"; sourceTree = "<group>"; };
+		6837EE65208DB3FD00D37D40 /* HTA B2B.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "HTA B2B.xcodeproj"; path = "../../Repo/TollBuddy SDK/HTA B2B.xcodeproj"; sourceTree = "<group>"; };
 		683EA9FC209C96A900EF2F3B /* ExitLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ExitLocation.gpx; sourceTree = "<group>"; };
 		B9FB6E5F20AEF209008E76D9 /* G107.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = G107.gpx; sourceTree = "<group>"; };
 		B9FB6E6120AEF209008E76D9 /* G103.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = G103.gpx; sourceTree = "<group>"; };
@@ -116,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6837EE70208DB4BD00D37D40 /* TollBuddy_SDK.framework in Frameworks */,
+				681D082A20B40503007A5D04 /* HTA_B2B.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,14 +117,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		681D081820B40051007A5D04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6837EE07208DB19900D37D40 = {
 			isa = PBXGroup;
 			children = (
-				6837EE65208DB3FD00D37D40 /* TollBuddy SDK.xcodeproj */,
+				681D082920B40503007A5D04 /* HTA_B2B.framework */,
+				6837EE65208DB3FD00D37D40 /* HTA B2B.xcodeproj */,
 				6837EE12208DB19900D37D40 /* TollbuddyFrameworkSample */,
 				6837EE27208DB19900D37D40 /* TollbuddyFrameworkSampleTests */,
 				6837EE32208DB19900D37D40 /* TollbuddyFrameworkSampleUITests */,
 				6837EE11208DB19900D37D40 /* Products */,
+				681D081820B40051007A5D04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,15 +185,6 @@
 			path = TollbuddyFrameworkSampleUITests;
 			sourceTree = "<group>";
 		};
-		6837EE66208DB3FD00D37D40 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6837EE6B208DB3FF00D37D40 /* TollBuddy_SDK.framework */,
-				6837EE6D208DB3FF00D37D40 /* TollBuddy SDKTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		68D19F9120971C2100400A61 /* Simulated locations */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,12 +209,11 @@
 				6837EE0C208DB19900D37D40 /* Sources */,
 				6837EE0D208DB19900D37D40 /* Frameworks */,
 				6837EE0E208DB19900D37D40 /* Resources */,
-				6837EE74208DB4BD00D37D40 /* Embed Frameworks */,
+				681D082420B4020A007A5D04 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6837EE73208DB4BD00D37D40 /* PBXTargetDependency */,
 			);
 			name = TollbuddyFrameworkSample;
 			productName = TollbuddyFrameworkSample;
@@ -322,12 +301,6 @@
 			mainGroup = 6837EE07208DB19900D37D40;
 			productRefGroup = 6837EE11208DB19900D37D40 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 6837EE66208DB3FD00D37D40 /* Products */;
-					ProjectRef = 6837EE65208DB3FD00D37D40 /* TollBuddy SDK.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				6837EE0F208DB19900D37D40 /* TollbuddyFrameworkSample */,
@@ -336,23 +309,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		6837EE6B208DB3FF00D37D40 /* TollBuddy_SDK.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TollBuddy_SDK.framework;
-			remoteRef = 6837EE6A208DB3FF00D37D40 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6837EE6D208DB3FF00D37D40 /* TollBuddy SDKTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "TollBuddy SDKTests.xctest";
-			remoteRef = 6837EE6C208DB3FF00D37D40 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6837EE0E208DB19900D37D40 /* Resources */ = {
@@ -430,11 +386,6 @@
 			isa = PBXTargetDependency;
 			target = 6837EE0F208DB19900D37D40 /* TollbuddyFrameworkSample */;
 			targetProxy = 6837EE30208DB19900D37D40 /* PBXContainerItemProxy */;
-		};
-		6837EE73208DB4BD00D37D40 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "TollBuddy SDK";
-			targetProxy = 6837EE72208DB4BD00D37D40 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -568,7 +519,6 @@
 		6837EE39208DB19900D37D40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TollbuddyFrameworkSample/TollbuddyFrameworkSample.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -589,7 +539,6 @@
 		6837EE3A208DB19900D37D40 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TollbuddyFrameworkSample/TollbuddyFrameworkSample.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

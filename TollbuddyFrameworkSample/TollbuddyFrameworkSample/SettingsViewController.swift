@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import TollBuddy_SDK
+import HTA_B2B
 import CoreLocation
 
 class SettingsViewController: UIViewController {
