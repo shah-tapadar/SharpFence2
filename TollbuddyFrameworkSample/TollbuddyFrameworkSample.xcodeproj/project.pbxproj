@@ -44,6 +44,20 @@
 			remoteGlobalIDString = 6837EE0F208DB19900D37D40;
 			remoteInfo = TollbuddyFrameworkSample;
 		};
+		684C2E8520B594EE0042E446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6837EE65208DB3FD00D37D40 /* HTA B2B.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6871730820861F26002BA0A4;
+			remoteInfo = "HTA B2B";
+		};
+		684C2E8720B594EE0042E446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6837EE65208DB3FD00D37D40 /* HTA B2B.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6871731120861F26002BA0A4;
+			remoteInfo = "HTA B2BTests";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -81,7 +95,7 @@
 		6837EE2F208DB19900D37D40 /* TollbuddyFrameworkSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TollbuddyFrameworkSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6837EE33208DB19900D37D40 /* TollbuddyFrameworkSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TollbuddyFrameworkSampleUITests.swift; sourceTree = "<group>"; };
 		6837EE35208DB19900D37D40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6837EE65208DB3FD00D37D40 /* HTA B2B.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "HTA B2B.xcodeproj"; path = "../../Repo/TollBuddy SDK/HTA B2B.xcodeproj"; sourceTree = "<group>"; };
+		6837EE65208DB3FD00D37D40 /* HTA B2B.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "HTA B2B.xcodeproj"; path = "../../Repo/HTA B2B Framework/HTA B2B.xcodeproj"; sourceTree = "<group>"; };
 		683EA9FC209C96A900EF2F3B /* ExitLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ExitLocation.gpx; sourceTree = "<group>"; };
 		B9FB6E5F20AEF209008E76D9 /* G107.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = G107.gpx; sourceTree = "<group>"; };
 		B9FB6E6120AEF209008E76D9 /* G103.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = G103.gpx; sourceTree = "<group>"; };
@@ -183,6 +197,15 @@
 				6837EE35208DB19900D37D40 /* Info.plist */,
 			);
 			path = TollbuddyFrameworkSampleUITests;
+			sourceTree = "<group>";
+		};
+		684C2E8120B594EE0042E446 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				684C2E8620B594EE0042E446 /* HTA_B2B.framework */,
+				684C2E8820B594EE0042E446 /* HTA B2BTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		68D19F9120971C2100400A61 /* Simulated locations */ = {
@@ -301,6 +324,12 @@
 			mainGroup = 6837EE07208DB19900D37D40;
 			productRefGroup = 6837EE11208DB19900D37D40 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 684C2E8120B594EE0042E446 /* Products */;
+					ProjectRef = 6837EE65208DB3FD00D37D40 /* HTA B2B.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6837EE0F208DB19900D37D40 /* TollbuddyFrameworkSample */,
@@ -309,6 +338,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		684C2E8620B594EE0042E446 /* HTA_B2B.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HTA_B2B.framework;
+			remoteRef = 684C2E8520B594EE0042E446 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		684C2E8820B594EE0042E446 /* HTA B2BTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "HTA B2BTests.xctest";
+			remoteRef = 684C2E8720B594EE0042E446 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6837EE0E208DB19900D37D40 /* Resources */ = {
