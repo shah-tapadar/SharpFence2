@@ -82,4 +82,27 @@ class ViewController: UIViewController {
     @IBAction func speedCheckStatusChanged(_ sender: Any) {
         B2B.setSpeedCheckEnabled(speedCheckSwitch.isOn)
     }
+
+    //MARK:- Retrieve Toll Details
+    func retrieveTollDetails() {
+        let tollDetailsRequestModel = B2BTollDetailsRequestModel()
+        tollDetailsRequestModel.fromDate = dateToString(dateString: "2018-05-16T08:15:30-05:00")
+        tollDetailsRequestModel.toDate = dateToString(dateString: "2018-05-18T08:15:30-05:00")
+        tollDetailsRequestModel.pageNumber = 2
+        tollDetailsRequestModel.pageSize = 5
+        B2B.retrieveGeoTollDetails(tollDetailsRequestModel) { (data, error) in
+            if let data = data {
+                let theJSONText = String(data: data,
+                                         encoding: .ascii)
+                print("JSON string = \(theJSONText!)")
+            }
+        }
+    }
+    
+    private func dateToString(dateString : String)-> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let dateString = dateFormatter.date(from: dateString)
+        return dateString
+    }
 }
