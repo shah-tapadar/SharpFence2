@@ -59,6 +59,19 @@ class ViewController: UIViewController {
         B2B.geofeneQueueChanged = { [weak self] (queue) in
             self?.geofenceQueueLabel.text = queue
         }
+        
+        B2B.errorTracker = {(error) in
+            switch error {
+            case .locationServicesDisabled:
+                print("Error : LocationServicesDisabled")
+            case .locationServicesDenied:
+                print("Error : locationServicesDenied")
+            case .locationServicesRestricted:
+                print("Error : LocationServicesRestricted")
+            case .serviceFailure(let errorMessage):
+                print("Error : \(errorMessage)")
+            }
+        }
     }
     
     func updateMonitoringState() {

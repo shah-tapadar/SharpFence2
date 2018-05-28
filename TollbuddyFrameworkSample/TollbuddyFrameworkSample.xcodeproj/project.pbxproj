@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		6815C86820AE983B00DBC903 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815C86720AE983B00DBC903 /* LogsViewController.swift */; };
 		6815C86A20AEB0FB00DBC903 /* UIViewController+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815C86920AEB0FB00DBC903 /* UIViewController+Custom.swift */; };
-		681D082A20B40503007A5D04 /* HTA_B2B.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681D082920B40503007A5D04 /* HTA_B2B.framework */; };
-		681D082B20B40503007A5D04 /* HTA_B2B.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 681D082920B40503007A5D04 /* HTA_B2B.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6827215120A969DB003E960E /* UIView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827215020A969DB003E960E /* UIView+Custom.swift */; };
 		6827215420A99BB3003E960E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827215320A99BB3003E960E /* SettingsViewController.swift */; };
 		6827215620A99CFE003E960E /* UserDefaultsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827215520A99CFE003E960E /* UserDefaultsHandler.swift */; };
@@ -21,6 +19,8 @@
 		6837EE1E208DB19900D37D40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6837EE1C208DB19900D37D40 /* LaunchScreen.storyboard */; };
 		6837EE29208DB19900D37D40 /* TollbuddyFrameworkSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837EE28208DB19900D37D40 /* TollbuddyFrameworkSampleTests.swift */; };
 		6837EE34208DB19900D37D40 /* TollbuddyFrameworkSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837EE33208DB19900D37D40 /* TollbuddyFrameworkSampleUITests.swift */; };
+		B91F2CE620BBDBAE004CB32B /* HTA_B2B.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684C2E8620B594EE0042E446 /* HTA_B2B.framework */; };
+		B91F2CE720BBDBAE004CB32B /* HTA_B2B.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 684C2E8620B594EE0042E446 /* HTA_B2B.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9FB6E6620AEF20A008E76D9 /* G107.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B9FB6E5F20AEF209008E76D9 /* G107.gpx */; };
 		B9FB6E6720AEF20A008E76D9 /* G103.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B9FB6E6120AEF209008E76D9 /* G103.gpx */; };
 		B9FB6E6820AEF20A008E76D9 /* G104.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B9FB6E6220AEF209008E76D9 /* G104.gpx */; };
@@ -58,16 +58,23 @@
 			remoteGlobalIDString = 6871731120861F26002BA0A4;
 			remoteInfo = "HTA B2BTests";
 		};
+		B91F2CE820BBDBAE004CB32B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6837EE65208DB3FD00D37D40 /* HTA B2B.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6871730720861F26002BA0A4;
+			remoteInfo = "HTA B2B";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		681D082420B4020A007A5D04 /* Embed Frameworks */ = {
+		B91F2CEA20BBDBAE004CB32B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				681D082B20B40503007A5D04 /* HTA_B2B.framework in Embed Frameworks */,
+				B91F2CE720BBDBAE004CB32B /* HTA_B2B.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +85,6 @@
 		6815C86720AE983B00DBC903 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
 		6815C86920AEB0FB00DBC903 /* UIViewController+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Custom.swift"; sourceTree = "<group>"; };
 		6815C86B20AEB56200DBC903 /* TollbuddyFrameworkSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TollbuddyFrameworkSample.entitlements; sourceTree = "<group>"; };
-		681D082920B40503007A5D04 /* HTA_B2B.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HTA_B2B.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6827215020A969DB003E960E /* UIView+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Custom.swift"; sourceTree = "<group>"; };
 		6827215320A99BB3003E960E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6827215520A99CFE003E960E /* UserDefaultsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHandler.swift; sourceTree = "<group>"; };
@@ -110,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				681D082A20B40503007A5D04 /* HTA_B2B.framework in Frameworks */,
+				B91F2CE620BBDBAE004CB32B /* HTA_B2B.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +147,6 @@
 		6837EE07208DB19900D37D40 = {
 			isa = PBXGroup;
 			children = (
-				681D082920B40503007A5D04 /* HTA_B2B.framework */,
 				6837EE65208DB3FD00D37D40 /* HTA B2B.xcodeproj */,
 				6837EE12208DB19900D37D40 /* TollbuddyFrameworkSample */,
 				6837EE27208DB19900D37D40 /* TollbuddyFrameworkSampleTests */,
@@ -232,11 +237,12 @@
 				6837EE0C208DB19900D37D40 /* Sources */,
 				6837EE0D208DB19900D37D40 /* Frameworks */,
 				6837EE0E208DB19900D37D40 /* Resources */,
-				681D082420B4020A007A5D04 /* Embed Frameworks */,
+				B91F2CEA20BBDBAE004CB32B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B91F2CE920BBDBAE004CB32B /* PBXTargetDependency */,
 			);
 			name = TollbuddyFrameworkSample;
 			productName = TollbuddyFrameworkSample;
@@ -433,6 +439,11 @@
 			target = 6837EE0F208DB19900D37D40 /* TollbuddyFrameworkSample */;
 			targetProxy = 6837EE30208DB19900D37D40 /* PBXContainerItemProxy */;
 		};
+		B91F2CE920BBDBAE004CB32B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "HTA B2B";
+			targetProxy = B91F2CE820BBDBAE004CB32B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -565,6 +576,7 @@
 		6837EE39208DB19900D37D40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TollbuddyFrameworkSample/TollbuddyFrameworkSample.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -585,6 +597,7 @@
 		6837EE3A208DB19900D37D40 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TollbuddyFrameworkSample/TollbuddyFrameworkSample.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

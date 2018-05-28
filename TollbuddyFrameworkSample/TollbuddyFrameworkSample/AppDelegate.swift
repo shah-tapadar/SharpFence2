@@ -79,7 +79,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         let tokenString = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
         debugPrint("Device Token: \(tokenString)")
         
-        B2B.application(application, didRegisterForRemoteNotificationsWithDeviceToken: deviceToken)
+        B2B.registeredForRemoteNotifications(withDeviceToken: deviceToken)
         //        displayPrompt(title: "Device Token", message: tokenString, acceptTitle: "OK", cancelTitle: nil, accepted: nil)
     }
     
@@ -103,16 +103,14 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func processPushedUserInfo(_ userInfo: [AnyHashable: Any], fromAppLaunch: Bool) {
         
         UIApplication.shared.applicationIconBadgeNumber = 0
-        
-        var message: String = "\(userInfo)"
-        if let alert = (userInfo["aps"] as? [AnyHashable: Any])?["alert"] as? String {
-            message = alert
+        if let alert = B2B.processPushNotification(withUserInfo: userInfo)  {
+            displayPrompt(title: "Push Notification Received", message: alert.message,
+                          acceptTitle: "OK", cancelTitle: nil,
+                          accepted: { (accepted) in
+            })
+        } else {
+            // Other Push notification
         }
-
-        displayPrompt(title: "Push Notification Received", message: message,
-            acceptTitle: "OK", cancelTitle: nil,
-            accepted: { (accepted) in
-        })
     }
     
     func displayPrompt(title: String?, message: String?,
