@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import HTA_B2B
+import B2B_SDK
 import MessageUI
 
 class ViewController: UIViewController {
@@ -33,6 +33,7 @@ class ViewController: UIViewController {
 
         B2B.setLoggingLevel(.debug, shouldWriteToFile: true)
         B2B.initializeSDK()
+//        B2B.setAppIdentifiers(appID: "TollBuddy", appKey: "TollBuddy")
         
         initializeView()
     }

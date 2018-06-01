@@ -8,7 +8,7 @@
 
 import UIKit
 import UserNotifications
-import HTA_B2B
+import B2B_SDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -99,48 +99,15 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         
         processPushedUserInfo(userInfo, fromAppLaunch: false)
     }
+   
     
     func processPushedUserInfo(_ userInfo: [AnyHashable: Any], fromAppLaunch: Bool) {
         
         UIApplication.shared.applicationIconBadgeNumber = 0
-        if let alert = B2B.processPushNotification(withUserInfo: userInfo)  {
-            displayPrompt(title: "Push Notification Received", message: alert.message,
-                          acceptTitle: "OK", cancelTitle: nil,
-                          accepted: { (accepted) in
-            })
-        } else {
-            // Other Push notification
-        }
+        B2BHelper.pushNotificationFromB2BSDK(userInfo)
     }
-    
-    func displayPrompt(title: String?, message: String?,
-                       acceptTitle: String, cancelTitle: String?,
-                       accepted: ((Bool) -> Void)?) {
-        
-        guard let topVC = window?.rootViewController?.topMostViewController() else {
-            return
-        }
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: acceptTitle, style: .default, handler: {
-            (action) -> Void in
-            alert.dismiss(animated: true, completion: nil)
-            accepted?(true)
-        })
-        alert.addAction(okAction)
-        
-        if let cancelString = cancelTitle {
-            let cancelAction = UIAlertAction(title: cancelString, style: .cancel, handler: {
-                (action) -> Void in
-                alert.dismiss(animated: true, completion: nil)
-                accepted?(false)
-            })
-            alert.addAction(cancelAction)
-        }
-        
-        DispatchQueue.main.async {
-            topVC.present(alert, animated: true, completion: nil)
-        }
-    }
+   
+
 }
 
 

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import HTA_B2B
+import B2B_SDK
 import CoreLocation
 
 class SettingsViewController: UIViewController {
