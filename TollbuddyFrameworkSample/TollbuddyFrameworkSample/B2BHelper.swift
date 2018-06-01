@@ -18,7 +18,7 @@ class B2BHelper {
     }
    static private var alertStatus: NotificationAlertStatus = .None
     
-   static func pushNotificationFromB2BSDK(_ userInfo: [AnyHashable : Any]) {
+   static func pushNotificationFromB2BSDK(_ userInfo: [AnyHashable : Any]) -> Bool {
         if let alert = B2B.processPushNotification(withUserInfo: userInfo), let message = alert.message {
             if notifications == nil {
                 notifications = [String]()
@@ -28,8 +28,10 @@ class B2BHelper {
                           acceptTitle: "OK", cancelTitle: nil,
                           accepted: { (accepted) in
             })
+            return true
         } else {
             // Other Push notification
+            return false
         }
     }
     

@@ -104,7 +104,10 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func processPushedUserInfo(_ userInfo: [AnyHashable: Any], fromAppLaunch: Bool) {
         
         UIApplication.shared.applicationIconBadgeNumber = 0
-        B2BHelper.pushNotificationFromB2BSDK(userInfo)
+        if !B2BHelper.pushNotificationFromB2BSDK(userInfo) {
+            // Other Push notification
+        }
+
     }
    
 
